@@ -1,5 +1,5 @@
 # ngBitcoinArbitrage
-AngularJS powered bitcoin arbitrage. Created during the [AngularJS hackathon on Sandhill Road](http://www.meetup.com/AngularJS-Silicon-Valley/events/166270732). Probably not useful at this stage.
+AngularJS powered bitcoin arbitrage. Created during the [AngularJS hackathon on Sand Hill Road](http://www.meetup.com/AngularJS-Silicon-Valley/events/166270732). Probably not useful at this stage.
 
 ## System
 

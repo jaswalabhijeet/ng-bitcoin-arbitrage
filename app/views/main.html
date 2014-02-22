@@ -4,33 +4,29 @@
     <li><a ng-href="#">About</a></li>
     <li><a ng-href="#">Contact</a></li>
   </ul>
-  <h3 class="text-muted">NgBitcoinArbitrage</h3>
+  <h3 class="text-muted">Bitcoin Arbitrage</h3>
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-</div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div class="row" ng-controller="MainCtrl">
+  <table class="table">
+    <tr>
+      <th>Profit</th>
+      <th></th>
+      <th>Buy</th>
+      <th>Sell</th>
+      <th>Volume</th>
+    </tr>
+    <tr ng-repeat="opp in opportunities">
+      <td>{{ opp.profit | number:2 }}</td>
+      <td>{{ opp.perc | number:2 }}%</td>
+      <td>{{ opp.buyprice | number:2 }} @ {{ opp.kbid }}</td>
+      <td>{{ opp.sellprice | number:2 }} @ {{ opp.kask }}</td>
+      <td>{{ opp.volume}}</td>
+    </tr>
+    </row>
+  </table>
 </div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
+  <p>♥ from the  <a href="http://www.meetup.com/AngularJS-Silicon-Valley/events/166270732">AngularJS hackathon</a> at Sand Hill Road</p>
 </div>
