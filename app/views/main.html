@@ -17,13 +17,15 @@
       <th>Buy</th>
       <th>Sell</th>
       <th>Volume</th>
+      <th>Time</th>
     </tr>
-    <tr ng-repeat="opp in opportunities">
+    <tr ng-repeat="opp in opportunities | orderBy:'-updated_on'">
       <td>{{ opp.profit | number:2 }}</td>
       <td>{{ opp.perc | number:2 }}%</td>
       <td>{{ opp.weighted_buyprice | number:2 }} @ {{ opp.kbid }}</td>
       <td>{{ opp.weighted_sellprice | number:2 }} @ {{ opp.kask }}</td>
       <td>{{ opp.volume}}</td>
+      <td>{{ opp.updated_on | date:'hh:mm:ss a'}}</td>
     </tr>
     </row>
   </table>
