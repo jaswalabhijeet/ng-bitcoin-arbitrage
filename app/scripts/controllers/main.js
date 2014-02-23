@@ -2,7 +2,7 @@
 
 
 function update ($scope, $http) {
-  $http.get('http://192.168.1.124:5000/bitcoin-arbitrage/api/v1.0/opportunities').success(function(data) {
+  $http.get('http://localhost:5000/bitcoin-arbitrage/api/v1.0/opportunities').success(function(data) {
     $scope.opportunities = data.opportunities;
     $scope.chartObject = {};
 
