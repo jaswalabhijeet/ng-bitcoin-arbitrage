@@ -1,11 +1,13 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
+    <!-- <li class="active"><a ng-href="#">Home</a></li>
     <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
+    <li><a ng-href="#">Contact</a></li> -->
   </ul>
   <h3 class="text-muted">Bitcoin Arbitrage</h3>
 </div>
+
+<div google-chart chart="chartObject" style="{{cssStyle}}"></div>
 
 <div class="row" ng-controller="MainCtrl">
   <table class="table">
@@ -19,13 +21,14 @@
     <tr ng-repeat="opp in opportunities">
       <td>{{ opp.profit | number:2 }}</td>
       <td>{{ opp.perc | number:2 }}%</td>
-      <td>{{ opp.buyprice | number:2 }} @ {{ opp.kbid }}</td>
-      <td>{{ opp.sellprice | number:2 }} @ {{ opp.kask }}</td>
+      <td>{{ opp.weighted_buyprice | number:2 }} @ {{ opp.kbid }}</td>
+      <td>{{ opp.weighted_sellprice | number:2 }} @ {{ opp.kask }}</td>
       <td>{{ opp.volume}}</td>
     </tr>
     </row>
   </table>
 </div>
+
 
 <div class="footer">
   <p>♥ from the  <a href="http://www.meetup.com/AngularJS-Silicon-Valley/events/166270732">AngularJS hackathon</a> at Sand Hill Road</p>

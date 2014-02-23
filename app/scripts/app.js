@@ -5,7 +5,8 @@ angular.module('ngBitcoinArbitrageApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'googlechart'
 ])
   .config(function ($routeProvider) {
     $routeProvider
