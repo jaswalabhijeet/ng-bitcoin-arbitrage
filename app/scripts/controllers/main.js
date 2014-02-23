@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ngBitcoinArbitrageApp')
-  .controller('MainCtrl', function ($scope, $http, $log) {
+  .controller('MainCtrl', function ($scope, $http, $interval) {
 
     function update () {
       $http.get('http://localhost:5000/bitcoin-arbitrage/api/v1.0/opportunities').success(function(data) {
@@ -34,6 +34,6 @@ angular.module('ngBitcoinArbitrageApp')
     }
 
     update();
-    setInterval(update, 10000);
+    $interval(update, 10000);
   });
   
