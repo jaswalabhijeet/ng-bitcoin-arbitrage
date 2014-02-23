@@ -7,27 +7,19 @@ angular.module('ngBitcoinArbitrageApp')
         $scope.opportunities = data.opportunities;
         $scope.chartObject = {};
 
+        for(var opp in $scope.opportunities) {
+          rows.push({
+            {c: [
+              {v: opp.kbid + ' / ' + opp.kask},
+              {v: opp.profit},
+            ]}
+          })
+        }
+        
         $scope.chartObject.data = {'cols': [
             {id: 't', label: 'Topping', type: 'string'},
             {id: 's', label: 'Slices', type: 'number'}
-          ], 'rows': [
-            {c: [
-                {v: 'Mushrooms'},
-                {v: 3},
-              ]},
-              {c: [
-                {v: 'Olives'},
-                {v: 31}
-              ]},
-              {c: [
-                {v: 'Zucchini'},
-                {v: 1},
-              ]},
-              {c: [
-                {v: 'Pepperoni'},
-                {v: 2},
-              ]}
-            ]};
+          ], 'rows': rows};
         
         
         // $routeParams.chartType == BarChart or PieChart or ColumnChart...
