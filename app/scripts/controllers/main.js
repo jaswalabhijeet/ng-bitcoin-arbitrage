@@ -15,22 +15,19 @@ function update ($scope, $http) {
           {v: (opp.kbid ) + ' / ' + (opp.kask)},
           {v: opp.profit },
           {v: numeral(opp.profit).format('$0.00') }
-          ]}
-      )
+        ]}
+      );
     }
     
     $scope.chartObject.data = {'cols': [
         {id: 't', label: 'Topping', type: 'string'},
         {id: 's', label: 'Profit ', type: 'number', prefix:'$', p: {}},
-        
       ], 'rows': rows};
-    
-    
-    // $routeParams.chartType == BarChart or PieChart or ColumnChart...
-    $scope.chartObject.type = "BarChart";
-    // $scope.chartObject.options = {
-    //     'title': 'How Much Pizza I Ate Last Night'
-    // }
+
+    $scope.chartObject.type = 'BarChart';
+    $scope.chartObject.options = {
+      'title': 'Profit by arbitrage opportunity'
+    };
   });
 }
 
