@@ -5,6 +5,12 @@ AngularJS powered bitcoin arbitrage. Created during the [AngularJS hackathon on 
 
 Setup your system for AngularJS: http://www.sitepoint.com/kickstart-your-angularjs-development-with-yeoman-grunt-and-bower/
 
+Works with:
+* https://github.com/lmartinho/bitcoin-arbitrage
+* https://github.com/lmartinho/bitcoin-arbitrage-service
+
 ## Install
+
+Requires the back-end from https://github.com/lmartinho/bitcoin-arbitrage-service running.
 
 ## Usage
